@@ -151,7 +151,59 @@ public class JavaListTest {
 		data.addIndex(-1, "the");
 	}
 	
-	// TODO write some tests for setIndex.
+	@Test
+	public void testsetIndex() {
+		ListADT<String> setindex = new JavaList<>();
+		setindex.addFront("A");
+		setindex.addFront("B");
+		setindex.setIndex(0, "A");
+		assertEquals(setindex.getIndex(0) == "A", true);
+	}
+	//multiple tests for addBack -- repeated and addIndex and removeBack
+	@Test
+	public void testaddIndex() {
+		ListADT<String> addindex = new JavaList<>();
+		addindex.addFront("A");
+		addindex.addFront("B");
+		addindex.addIndex(1, "C");
+		assertEquals(addindex.getIndex(1) == "C", true);
+	}
+	
+	@Test
+	public void testaddBack() {
+		ListADT<String> addback = new JavaList<>();
+		addback.addBack("A");
+		addback.addBack("B");
+		addback.addFront("C");
+		assertEquals(addback.getIndex(addback.size()-1) == "B", true);
+	}
+	
+	@Test
+	public void testremoveBack() {
+		ListADT<String> removeback = new JavaList<>();
+		removeback.addBack("A");
+		removeback.addBack("B");
+		removeback.removeBack();
+		assertEquals(removeback.getIndex(removeback.size()-1) == "A", true);
+	}
+	
+	@Test
+	public void testremoveIndex() {
+		ListADT<String> removeindex = new JavaList<>();
+		removeindex.addFront("A");
+		removeindex.addFront("B");
+		removeindex.removeIndex(1);
+		assertEquals((removeindex.size()-1) == 0, true);
+	}
+	
+	@Test
+	public void testremoveFront() {
+		ListADT<String> removefront = new JavaList<>();
+		removefront.addFront("A");
+		removefront.addFront("B");
+		removefront.removeFront();
+		assertEquals((removefront.size()-1) == 0, true);
+	}
 	
 	@Test
 	public void testToJava() {

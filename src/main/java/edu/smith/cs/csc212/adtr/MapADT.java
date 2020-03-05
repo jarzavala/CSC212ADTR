@@ -32,7 +32,7 @@ public abstract class MapADT<KeyType, ValueType> implements Iterable<Pair<KeyTyp
 	 * @return the value found or null if k is missing.
 	 */
 	@Nullable
-	public abstract ValueType get(KeyType keyType);
+	public abstract ValueType get(KeyType keyType); 
 
 	/**
 	 * How many key-value mappings are in this data structure?
@@ -49,6 +49,7 @@ public abstract class MapADT<KeyType, ValueType> implements Iterable<Pair<KeyTyp
 	 */
 	@Nullable
 	public abstract ValueType remove(KeyType k);
+
 
 	/**
 	 * Get a list of all the keys in this table (order may be random).
@@ -138,7 +139,7 @@ public abstract class MapADT<KeyType, ValueType> implements Iterable<Pair<KeyTyp
 	}
 	
 	/**
-	 * Don't let people mis-use this class.
+	 * Don't let people misuse this class.
 	 */
 	@Override
 	public int hashCode() {

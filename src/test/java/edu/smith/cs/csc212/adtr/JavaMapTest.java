@@ -21,4 +21,35 @@ public class JavaMapTest {
 		assertEquals(empty.size(), 0);
 		//Assert.assert
 	}
+	
+	@Test
+	public void testPut() {
+		MapADT<Integer, String> putset = new JavaMap<>();
+		putset.put(1, "A");
+		assertEquals(putset.size(), 1);
+	}
+	
+	@Test
+	public void testGet() {
+		MapADT<Integer, String> getset = new JavaMap<>();
+		getset.put(1, "A");
+		getset.get(1);
+		assertEquals(getset.get(1) == "A", true);
+	}
+	
+	@Test
+	public void testSize() {
+		MapADT<Integer, String> sizeset = new JavaMap<>();
+		sizeset.put(1, "A");
+		assertEquals(sizeset.size(), 1);
+	}
+	
+	@Test
+	public void testRemove() {
+		MapADT<Integer, String> removeset = new JavaMap<>();
+		removeset.put(1, "A");
+		removeset.remove(1);
+		assertEquals(removeset.size(), 0);
+	}	
+	
 }

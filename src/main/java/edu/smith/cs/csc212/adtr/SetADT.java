@@ -126,3 +126,4 @@ public abstract class SetADT<ItemType> implements Iterable<ItemType> {
 		throw new IllegalArgumentException("Don't use a SetADT as a key in a hashmap!");
 	}
 }
+

@@ -76,7 +76,7 @@ public abstract class ListADT<ItemType> implements Iterable<ItemType> {
 	public abstract void addFront(ItemType value);
 
 	/**
-	 * Add value to the back of hte list.
+	 * Add value to the back of the list.
 	 * 
 	 * @param value - the item to add.
 	 */
@@ -114,6 +114,7 @@ public abstract class ListADT<ItemType> implements Iterable<ItemType> {
 		}
 	}
 	
+	//ask about these == not used -- check for the bugs
 	/**
 	 * Check the index for a get/set/remove method.
 	 * Not for LinkedList classes!
@@ -206,7 +207,7 @@ public abstract class ListADT<ItemType> implements Iterable<ItemType> {
 	}
 	
 	/**
-	 * Don't let people mis-use this class.
+	 * Don't let people misuse this class.
 	 */
 	@Override
 	public int hashCode() {

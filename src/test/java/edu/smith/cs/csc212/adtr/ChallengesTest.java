@@ -18,7 +18,7 @@ public class ChallengesTest {
 		left.insert("B");
 		right.insert("B");
 		right.insert("C");
-		
+		//Union is "A","B","C"
 		SetADT<String> expected = new JavaSet<>();
 		expected.insert("A");
 		expected.insert("B");
@@ -26,6 +26,7 @@ public class ChallengesTest {
 		Assert.assertEquals(expected, Challenges.union(left, right));
 	}
 	
+	//John typed this
 	@Test
 	public void testIntersectionSimple() {
 		SetADT<String> left = new JavaSet<>();
@@ -35,7 +36,7 @@ public class ChallengesTest {
 		left.insert("B");
 		right.insert("B");
 		right.insert("C");
-		
+		//intersection is "B"
 		SetADT<String> expected = new JavaSet<>();
 		expected.insert("B");
 		Assert.assertEquals(expected, Challenges.intersection(left, right));
@@ -55,5 +56,6 @@ public class ChallengesTest {
 		
 		Assert.assertEquals(expected, Challenges.wordCount(example));
 	}
+	
 
 }
